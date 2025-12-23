@@ -14,7 +14,7 @@ if(!isset($_SESSION['saved_name'])){
 }
 
 // UPLOAD
-$upload_result = null;
+$upload_result = null;  
 if(isset($_POST['upload_btn']) && isset($_FILES['myfile'])){
     $dir = "uploads/";
     if(!is_dir($dir)) mkdir($dir, 0777, true);
