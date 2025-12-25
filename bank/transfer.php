@@ -96,11 +96,11 @@ body { font-family: Arial, sans-serif; background: #f0f2f5; direction: rtl; marg
 h2 { text-align: center; color: #333; margin-bottom: 20px; }
 form { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; }
 select, input[type="number"] { padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px; }
-input[type="submit"] { background: #28a745; color: #fff; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
-input[type="submit"]:hover { background: #218838; }
+input[type="submit"] { background: #174053ff; color: #fff; padding: 12px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+input[type="submit"]:hover { background: #2b3061ff; }
 table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
 table th, table td { padding: 10px; border: 1px solid #ddd; text-align: center; }
-table th { background: #007bff; color: #fff; }
+table th { background: #19395cff; color: #fff; }
 .message { text-align: center; padding: 10px; font-weight: bold; border-radius: 8px; margin-bottom: 20px; }
 .message[style*="green"] { background: #d4edda; color: #155724; }
 .message[style*="red"] { background: #f8d7da; color: #721c24; }
