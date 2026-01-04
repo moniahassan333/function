@@ -1,0 +1,23 @@
+[2026-01-01 18:34:10] Login failed: Wrong password - monia@gmail.com, attempts: 1
+[2026-01-01 18:34:14] Login failed: Wrong password - monia@gmail.com, attempts: 2
+[2026-01-01 18:34:17] Login failed: Wrong password - monia@gmail.com, attempts: 3
+[2026-01-02 09:46:41] Login failed: User not found - moniamail.com
+[2026-01-02 09:48:10] Register failed: Invalid email - sssshjjkk
+[2026-01-02 09:48:12] Register failed: Invalid email - sssshjjkk
+[2026-01-02 09:48:13] Register failed: Invalid email - sssshjjkk
+[2026-01-02 09:48:14] Register failed: Invalid email - sssshjjkk
+[2026-01-02 09:48:22] Register failed: Missing fields - 
+[2026-01-02 09:48:28] Login failed: User not found - moniamail.com
+[2026-01-02 17:51:19] Register failed: Missing fields - 
+[2026-01-02 17:51:21] Register failed: Missing fields - 
+[2026-01-02 17:56:02] Register failed: Missing fields - 
+[2026-01-02 17:56:13] Login failed: Missing fields - 
+[2026-01-02 18:08:19] Register failed: Missing fields - 
+[2026-01-02 18:12:33] Login failed: Missing fields - 
+[2026-01-02 18:12:35] Login failed: Missing fields - 
+[2026-01-02 18:12:49] Login failed: User not found - soso
+[2026-01-02 18:13:00] Login failed: Missing fields - soso
+[2026-01-02 18:13:03] Login failed: Missing fields - soso
+[2026-01-02 18:13:51] Register failed: Short password - she@gmail.com
+[2026-01-03 15:22:04] Register failed: Missing fields - 
+[2026-01-03 15:22:14] Login failed: Wrong password - monia@gmail.com, attempts: 1
