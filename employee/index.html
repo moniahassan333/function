@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>نظام إدارة الموظفين</title>
+<style>
+body {font-family:Arial;background:linear-gradient(135deg,#667eea,#764ba2);margin:0;padding:0;}
+.container {width:900px;margin:40px auto;background:#fff;border-radius:12px;padding:30px;box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+h1 {text-align:center;color:#4a4a4a;}
+h2 {color:#764ba2;border-bottom:2px solid #eee;padding-bottom:5px;}
+.card {background:#f9f9f9;padding:20px;margin-top:20px;border-radius:10px;}
+input, select, button {width:100%;padding:10px;margin-top:10px;border-radius:6px;border:1px solid #ccc;font-size:14px;}
+button {background:#667eea;color:white;border:none;cursor:pointer;transition:0.3s;}
+button:hover {background:#5a67d8;}
+.row {display:flex;gap:10px;}
+.row input {flex:1;}
+.view-btn {background:#48bb78;}
+.view-btn:hover {background:#38a169;}
+.delete-btn {background:#e53e3e;}
+.delete-btn:hover {background:#c53030;}
+.notification {padding:10px;margin-top:10px;border-radius:6px;background:#f56565;color:white;display:none;}
+footer {text-align:center;margin-top:30px;color:#777;font-size:13px;}
+</style>
+<script>
+function showNotification(msg, success=false){
+    const notif = document.getElementById('notif');
+    notif.textContent = msg;
+    notif.style.display='block';
+    notif.style.background = success ? '#48bb78' : '#f56565';
+    setTimeout(()=>{notif.style.display='none';},4000);
+}
+// إشعارات من PHP
+const params = new URLSearchParams(window.location.search);
+if(params.has('error')) showNotification(params.get('error'));
+if(params.has('success')) showNotification(params.get('success'), true);
+</script>
+</head>
+<body>
+<div class="container">
+<h1>💼 نظام إدارة الموظفين</h1>
+<div id="notif" class="notification"></div>
+
+<!-- إضافة موظف -->
+<div class="card">
+<h2>➕ إضافة موظف</h2>
+<form action="employees.php" method="post">
+<div class="row">
+<input type="number" name="id" placeholder="رقم الموظف" required>
+<input type="text" name="name" placeholder="اسم الموظف" required>
+</div>
+<select name="type" required>
+<option value="">اختر نوع الموظف</option>
+<option value="permanent">موظف دائم</option>
+<option value="contract">موظف بعقد</option>
+<option value="manager">مدير</option>
+</select>
+<div class="row">
+<input type="number" name="salary" placeholder="الراتب الأساسي (دائم/مدير)">
+<input type="number" name="bonus" placeholder="البونص (مدير)">
+</div>
+<div class="row">
+<input type="number" name="hours" placeholder="عدد الساعات (بعقد)">
+<input type="number" name="rate" placeholder="سعر الساعة (بعقد)">
+</div>
+<button type="submit" name="add">إضافة الموظف</button>
+</form>
+</div>
+
+<!-- حذف موظف -->
+<div class="card">
+<h2>🗑️ حذف موظف</h2>
+<form action="employees.php" method="post">
+<input type="number" name="delete_id" placeholder="رقم الموظف" required>
+<select name="delete_type" required>
+<option value="permanent">موظف دائم</option>
+<option value="contract">موظف بعقد</option>
+<option value="manager">مدير</option>
+</select>
+<button class="delete-btn" type="submit">حذف الموظف</button>
+</form>
+</div>
+
+<!-- عرض الموظفين -->
+<div class="card">
+<h2>📋 عرض الموظفين</h2>
+<form action="view_employees.php" method="get">
+<button class="view-btn" type="submit">عرض جميع الموظفين</button>
+</form>
+</div>
+
+<footer>© 2026 – مشروع برمجة كائنية | نظام إدارة الموظفين</footer>
+</div>
+</body>
+</html>
+

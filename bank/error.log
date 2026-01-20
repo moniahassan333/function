@@ -2,3 +2,9 @@
 [2025-12-25 08:23:47] Transfer blocked | Reason: Insufficient balance | Source: 1 | Amount: 700000
 [2026-01-01 13:56:56] Blocked | Same account used | ID: 1
 [2026-01-01 14:05:26] Blocked | Invalid amount: 0
+[2026-01-01 19:20:18] Blocked | Invalid amount: -1
+[2026-01-01 19:22:15] Blocked | Invalid amount: -1
+[2026-01-01 19:23:09] Blocked | Invalid amount: -1
+[2026-01-01 19:23:09] Blocked | Invalid amount: -1
+[2026-01-01 19:23:09] Blocked | Invalid amount: -1
+[2026-01-01 19:24:09] Blocked | Invalid amount: -1
