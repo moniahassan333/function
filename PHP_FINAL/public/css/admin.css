@@ -1,0 +1,294 @@
+
+
+/**
+* LUXURY SOFT ADMIN DASHBOARD
+* Calm & Elegant with subtle animation & shine
+*/
+
+/* ===== VARIABLES ===== */
+:root {
+    --primary-color: #8B5CF6;
+    --primary-dark: #6D28D9;
+    --accent-color: #F472B6;
+    --accent-dark: #DB2777;
+    --bg-color: #F7F8FC;
+    --bg-white: #FFFFFF;
+    --bg-dark: #1F2937;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --text-disabled: #9CA3AF;
+    --divider-color: #E5E7EB;
+    --border-color: #E5E7EB;
+    --shadow-1: 0 4px 12px rgba(0,0,0,0.05);
+    --shadow-2: 0 8px 24px rgba(0,0,0,0.08);
+    --shadow-3: 0 16px 40px rgba(0,0,0,0.12);
+    --sidebar-width: 260px;
+    --sidebar-bg: linear-gradient(180deg, #1F2937, #111827);
+    --sidebar-text: #E5E7EB;
+    --sidebar-hover: rgba(255,255,255,0.08);
+    --sidebar-active: rgba(139,92,246,0.25);
+    --transition: 0.3s ease;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-primary);
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* ===== LAYOUT ===== */
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    box-shadow: var(--shadow-3);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 28px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    margin: 8px 12px;
+    border-radius: 12px;
+    color: var(--sidebar-text);
+    transition: var(--transition);
+}
+
+.sidebar-nav-link:hover {
+    background: var(--sidebar-hover);
+}
+
+.sidebar-nav-link.active {
+    background: var(--sidebar-active);
+    color: #fff;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    margin-right: var(--sidebar-width);
+    width: 100%;
+    padding: 32px;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    background: var(--bg-white);
+    padding: 18px 28px;
+    box-shadow: var(--shadow-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 24px;
+}
+
+/* ===== AVATAR (Instagram Style) ===== */
+.user-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 2px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#FEDA75,#FA7E1E,#D62976,#962FBF,#4F5BD5);
+    box-shadow: 0 6px 16px rgba(214,41,118,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #fff;
+    border: 2px solid #fff;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background: var(--bg-white);
+    border-radius: 18px;
+    box-shadow: var(--shadow-1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(25deg) translateX(-100%);
+    transition: transform 0.8s ease;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    transform: rotate(25deg) translateX(200%);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-2);
+}
+
+.card-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.card-body {
+    padding: 24px;
+}
+
+/* ===== STATS CARDS ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 24px;
+}
+
+.stat-card {
+    padding: 28px;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    box-shadow: var(--shadow-2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-3);
+}
+
+.stat-card.accent {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+    padding: 12px 26px;
+    border-radius: 999px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(161, 140, 209, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-dark));
+    color: #fff;
+}
+
+/* ===== TABLES ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+table th {
+    background: #f0ecf9;
+    padding: 12px;
+    text-align: left;
+    color: var(--text-secondary);
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+table tbody tr:hover {
+    background: #F3F4F6;
+}
+
+/* ===== ALERTS ===== */
+.alert {
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background: #ECFDF5;
+    color: #065F46;
+}
+
+.alert-error {
+    background: #FEF2F2;
+    color: #991B1B;
+}
+
+.alert-info {
+    background: #EEF2FF;
+    color: #3730A3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+    .sidebar {
+        transform: translateX(100%);
+    }
+    .main-content {
+        margin-right: 0;
+        padding: 20px;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+
+
